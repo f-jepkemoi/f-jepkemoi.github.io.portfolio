@@ -149,7 +149,110 @@
     <ul class="projects">
       <li><strong>Threat Monitoring Dashboard:</strong> A real-time SOC dashboard prototype to analyze alerts using open-source tools.</li>
       <li><strong>Simulated Phishing Campaign:</strong> Designed a mock phishing awareness test and tracked results for awareness training.</li>
-      <li><strong>Windows Server Log Collection:</strong> Setup and documented log collection f
+      <li><strong>Windows Server Log Collection:</strong> Setup and documented log collection from Windows Server to SIEM for incident analysis.</li>
+      <li><strong>Cloud Compliance Audit Report:</strong> Worked with SyncFusion to review license usage and ensure regulatory compliance.</li>
+    </ul>
+  </section>
+
+  <section id="lab-challenges">
+    <h2>Lab Challenges</h2>
+
+    <article>
+      <h3>Lab: Explore Microsoft Entra ID User Settings</h3>
+      <p><strong>Problem Statement:</strong> Understand and configure user-specific settings in Microsoft Entra ID to enhance identity management and access control.</p>
+      <p><strong>Approach:</strong> Navigated the Microsoft Entra portal, explored user profiles, configured properties like usage location, and tested access restrictions.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra Admin Center, Azure Portal</p>
+      <p><strong>Key Lessons Learned:</strong> Gained insight into user management within Entra ID.</p>
+    </article>
+
+    <article>
+      <h3>Lab: Microsoft Entra Self-Service Password Reset</h3>
+      <p><strong>Problem Statement:</strong> Implement and test self-service password reset (SSPR).</p>
+      <p><strong>Approach:</strong> Configured authentication methods and tested password reset flow.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra, Azure AD</p>
+      <p><strong>Key Lessons Learned:</strong> Importance of secure and user-friendly recovery options.</p>
+    </article>
+
+    <article>
+      <h3>Lab: Microsoft Entra Conditional Access</h3>
+      <p><strong>Problem Statement:</strong> Apply policies to ensure only secure users/devices access resources.</p>
+      <p><strong>Approach:</strong> Created policies and tested login behavior in Azure AD.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra, Azure AD Sign-In Logs</p>
+      <p><strong>Key Lessons Learned:</strong> Enforcing Zero Trust principles in real scenarios.</p>
+    </article>
+
+    <article>
+      <h3>Lab: Privileged Identity Management (PIM)</h3>
+      <p><strong>Problem Statement:</strong> Control access to high-level admin roles in Microsoft Entra.</p>
+      <p><strong>Approach:</strong> Enabled JIT role access and tested approval workflows.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra PIM, Azure Portal</p>
+      <p><strong>Key Lessons Learned:</strong> How to protect sensitive roles and track changes securely.</p>
+    </article>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>The University of Kabianga</strong><br>
+    Bachelor’s Degree in Information Technology<br>
+    <em>August 2017 – March 2022</em>
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <p><strong>SOC Analyst – Cyber Shujaa (2025 – Present)</strong><br>
+      Hands-on SOC skills in log analysis, threat detection, and Microsoft Sentinel.<br>
+      <em>Skills:</em> Cybersecurity, KQL, Teamwork, Microsoft Security Tools
+    </p>
+
+    <p><strong>Software Renewal Specialist – SyncFusion</strong><br>
+      Handled licensing, compliance audits, and internal reporting.<br>
+      <em>Skills:</em> Software Licensing, Data Privacy, Legal Research
+    </p>
+
+    <p><strong>Hackathon Participant – Women Techsters (2021)</strong><br>
+      Built security solutions to protect children online during regional competition.<br>
+      <em>Skills:</em> Online Safety, Team Collaboration
+    </p>
+
+    <p><strong>IT Intern – Baringo County Government</strong><br>
+      Supported IT systems, built HR tools, and documented digital transformation projects.<br>
+      <em>Skills:</em> Technical Support, Networking, Ajira Documentation
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:chepkongafaith8@gmail.com">chepkongafaith8@gmail.com</a></p>
+    <p>LinkedIn: <a href="http://www.linkedin.com/in/chepkonga2420" target="_blank">linkedin.com/in/chepkonga2420</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Faith Jepkemoi Chepkonga | Built with 💛 and Cyber Confidence
+  </footer>
+
+  <script>
+    function showSection(id) {
+      // Hide all sections
+      document.querySelectorAll("section").forEach(section => {
+        section.style.display = "none";
+      });
+
+      // Show only the selected section
+      const selected = document.getElementById(id);
+      if (selected) selected.style.display = "block";
+
+      // Show the footer
+      document.querySelector("footer").style.display = "block";
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
+
 
 
 
