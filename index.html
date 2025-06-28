@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -16,10 +16,13 @@
       background-image: url('Image2.jpeg');
       background-size: cover;
       background-position: center;
-      position: relative;
       color: #fff;
       padding: 4rem 1rem;
       text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     header .overlay {
@@ -44,6 +47,9 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -51,6 +57,7 @@
       text-decoration: none;
       padding: 1rem;
       margin: 0 10px;
+      cursor: pointer;
     }
 
     nav a:hover {
@@ -62,6 +69,7 @@
       padding: 3rem 1rem;
       max-width: 800px;
       margin: auto;
+      display: none;
     }
 
     h2 {
@@ -73,15 +81,6 @@
     h3 {
       margin-top: 1.5rem;
       color: #222;
-    }
-
-    .resume a, .contact a {
-      color: #f1c40f;
-      text-decoration: none;
-    }
-
-    .resume a:hover, .contact a:hover {
-      text-decoration: underline;
     }
 
     ul.projects {
@@ -98,6 +97,16 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+      display: none;
+    }
+
+    .resume a, .contact a {
+      color: #f1c40f;
+      text-decoration: none;
+    }
+
+    .resume a:hover, .contact a:hover {
+      text-decoration: underline;
     }
 
     article {
@@ -109,24 +118,28 @@
 
   <header>
     <div class="overlay">
-      <img src="Profile.jpg" alt="Profile.jpg" class="profile-pic" />
+      <img src="Profile.jpg" alt="Profile" class="profile-pic" />
       <h1>Faith Jepkemoi Chepkonga</h1>
       <p>Cybersecurity Professional & SOC Analyst</p>
     </div>
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#lab-challenges">Lab Challenges</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('projects')">Projects</a>
+    <a onclick="showSection('lab-challenges')">Lab Challenges</a>
+    <a onclick="showSection('education')">Education</a>
+    <a onclick="showSection('experience')">Experience</a>
+    <a onclick="showSection('contact')">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am an enthusiastic Information Technologist and dedicated team player, currently training with Cyber Shujaa and Microsoft to become a Cybersecurity Professional and SOC Analyst. With a strong foundation in IT, networking, and threat management, I apply practical and theoretical skills in dynamic environments.
+      I am a passionate and hardworking cybersecurity professional with hands-on experience in detecting threats, protecting user accounts, and analyzing system logs.
+    </p>
+    <p>
+      Through labs, projects, and real-world practice, I’ve built strong skills to work as a SOC Analyst and help keep systems safe and secure.
     </p>
     <p class="resume">
       <strong>Download my resume:</strong>
@@ -152,60 +165,63 @@
       <p><strong>Problem Statement:</strong> Understand and configure user-specific settings in Microsoft Entra ID to enhance identity management and access control.</p>
       <p><strong>Approach:</strong> Navigated the Microsoft Entra portal, explored user profiles, configured properties like usage location, and tested access restrictions.</p>
       <p><strong>Tools Used:</strong> Microsoft Entra Admin Center, Azure Portal</p>
-      <p><strong>Key Lessons Learned:</strong> Gained insight into user management within Entra ID, including how organizational settings affect user access and policy application.</p>
+      <p><strong>Key Lessons Learned:</strong> Gained insight into user management within Entra ID.</p>
     </article>
 
     <article>
       <h3>Lab: Microsoft Entra Self-Service Password Reset</h3>
-      <p><strong>Problem Statement:</strong> Implement and test self-service password reset (SSPR) capabilities to reduce helpdesk workload and empower users.</p>
-      <p><strong>Approach:</strong> Configured SSPR in Microsoft Entra, defined authentication methods, and tested password reset flows using test user accounts.</p>
-      <p><strong>Tools Used:</strong> Microsoft Entra, Azure AD, Authentication Methods Policy</p>
-      <p><strong>Key Lessons Learned:</strong> Learned the importance of multifactor authentication in SSPR and how to enforce secure self-service practices across an organization.</p>
+      <p><strong>Problem Statement:</strong> Implement and test self-service password reset (SSPR).</p>
+      <p><strong>Approach:</strong> Configured authentication methods and tested password reset flow.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra, Azure AD</p>
+      <p><strong>Key Lessons Learned:</strong> Importance of secure and user-friendly recovery options.</p>
     </article>
 
     <article>
       <h3>Lab: Microsoft Entra Conditional Access</h3>
-      <p><strong>Problem Statement:</strong> Create conditional access policies to protect resources and ensure only compliant and secure devices/users gain access.</p>
-      <p><strong>Approach:</strong> Defined conditional access policies based on location, device compliance, and risk levels. Simulated user login scenarios to evaluate policy impact.</p>
-      <p><strong>Tools Used:</strong> Microsoft Entra, Conditional Access Policy Builder, Azure AD Sign-in Logs</p>
-      <p><strong>Key Lessons Learned:</strong> Learned how conditional access policies can dynamically adapt to threat conditions and help enforce Zero Trust principles.</p>
+      <p><strong>Problem Statement:</strong> Apply policies to ensure only secure users/devices access resources.</p>
+      <p><strong>Approach:</strong> Created policies and tested login behavior in Azure AD.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra, Azure AD Sign-In Logs</p>
+      <p><strong>Key Lessons Learned:</strong> Enforcing Zero Trust principles in real scenarios.</p>
     </article>
 
     <article>
-      <h3>Lab: Explore Privileged Identity Management (PIM)</h3>
-      <p><strong>Problem Statement:</strong> Investigate how to manage just-in-time (JIT) privileged access to protect high-risk roles in Microsoft Entra.</p>
-      <p><strong>Approach:</strong> Enabled and configured Microsoft Entra Privileged Identity Management, assigned eligible roles, and tested role activation workflows with approvals.</p>
-      <p><strong>Tools Used:</strong> Microsoft Entra PIM, Azure AD, Role Settings, Notifications</p>
-      <p><strong>Key Lessons Learned:</strong> Understood how PIM minimizes the risk of privilege abuse and ensures accountability through access reviews and audit logs.</p>
+      <h3>Lab: Privileged Identity Management (PIM)</h3>
+      <p><strong>Problem Statement:</strong> Control access to high-level admin roles in Microsoft Entra.</p>
+      <p><strong>Approach:</strong> Enabled JIT role access and tested approval workflows.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra PIM, Azure Portal</p>
+      <p><strong>Key Lessons Learned:</strong> How to protect sensitive roles and track changes securely.</p>
     </article>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>The University of Kabianga</strong><br>
+    Bachelor’s Degree in Information Technology<br>
+    <em>August 2017 – March 2022</em>
+    </p>
   </section>
 
   <section id="experience">
     <h2>Experience</h2>
 
-    <p><strong>SOC Analyst Trainee – Cyber Shujaa (April 2025 – Present)</strong><br>
-      Apprenticeship focused on developing real-world SOC analyst skills with Microsoft and Cyber Shujaa programs.<br>
-      <em>Skills:</em> Time Management, Soft Skills Training, Cybersecurity, KQL, Microsoft Sentinel
+    <p><strong>SOC Analyst – Cyber Shujaa (2025 – Present)</strong><br>
+      Hands-on SOC skills in log analysis, threat detection, and Microsoft Sentinel.<br>
+      <em>Skills:</em> Cybersecurity, KQL, Teamwork, Microsoft Security Tools
     </p>
 
-    <p><strong>Software Renewal Specialist – SyncFusion (August 2023 – January 2025)</strong><br>
-      Conducted compliance research, managed internal reports, reviewed software licensing, and ensured data accuracy.<br>
-      <em>Skills:</em> Data Entry, Software Legal Issues, Accountability, Microsoft OneDrive, Data Privacy Best Practices
+    <p><strong>Software Renewal Specialist – SyncFusion</strong><br>
+      Handled licensing, compliance audits, and internal reporting.<br>
+      <em>Skills:</em> Software Licensing, Data Privacy, Legal Research
     </p>
 
-    <p><strong>Cybersecurity Participant – Women Techsters Nairobi Hackathon (August 2021)</strong><br>
-      Participated in a regional cybersecurity hackathon promoting children’s safety online and collaborative security challenges.<br>
-      <em>Skills:</em> Cybersecurity, Teamwork, Online Child Safety
+    <p><strong>Hackathon Participant – Women Techsters (2021)</strong><br>
+      Built security solutions to protect children online during regional competition.<br>
+      <em>Skills:</em> Online Safety, Team Collaboration
     </p>
 
-    <p><strong>IT Officer Student Intern – Baringo County Government (Jan 2021 – April 2021)</strong><br>
-      Delivered high-level tech support, developed HR portal systems, handled networks, and documented Ajira digital projects.<br>
-      <em>Skills:</em> Security, Networking, Technical Support, Critical Thinking, Data Management, Teamwork, Decision-Making
-    </p>
-
-    <p><strong>Microsoft Technology Associate Trainee – Africa Center for Women in ICT (Nov 2020 – Mar 2021)</strong><br>
-      Trained in foundational IT and cybersecurity concepts including firewalls and network security.<br>
-      <em>Skills:</em> Cybersecurity, Firewalls, Security, Networking
+    <p><strong>IT Intern – Baringo County Government</strong><br>
+      Supported IT systems, built HR tools, and documented digital transformation projects.<br>
+      <em>Skills:</em> Technical Support, Networking, Ajira Documentation
     </p>
   </section>
 
@@ -219,5 +235,16 @@
     &copy; 2025 Faith Jepkemoi Chepkonga | Built with 💛 and Cyber Confidence
   </footer>
 
+  <script>
+    // Show section when clicked
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => {
+        sec.style.display = "none";
+      });
+      document.getElementById(id).style.display = "block";
+      document.querySelector("footer").style.display = "block";
+    }
+  </script>
 </body>
 </html>
+
