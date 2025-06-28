@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -70,6 +70,11 @@
       padding-bottom: 0.5rem;
     }
 
+    h3 {
+      margin-top: 1.5rem;
+      color: #222;
+    }
+
     .resume a, .contact a {
       color: #f1c40f;
       text-decoration: none;
@@ -94,6 +99,10 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
+
+    article {
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -109,6 +118,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#lab-challenges">Lab Challenges</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -132,6 +142,42 @@
       <li><strong>Windows Server Log Collection:</strong> Setup and documented log collection from Windows Server to SIEM for incident analysis.</li>
       <li><strong>Cloud Compliance Audit Report:</strong> Worked with SyncFusion to review license usage and ensure regulatory compliance.</li>
     </ul>
+  </section>
+
+  <section id="lab-challenges">
+    <h2>Lab Challenges</h2>
+
+    <article>
+      <h3>Lab: Explore Microsoft Entra ID User Settings</h3>
+      <p><strong>Problem Statement:</strong> Understand and configure user-specific settings in Microsoft Entra ID to enhance identity management and access control.</p>
+      <p><strong>Approach:</strong> Navigated the Microsoft Entra portal, explored user profiles, configured properties like usage location, and tested access restrictions.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra Admin Center, Azure Portal</p>
+      <p><strong>Key Lessons Learned:</strong> Gained insight into user management within Entra ID, including how organizational settings affect user access and policy application.</p>
+    </article>
+
+    <article>
+      <h3>Lab: Microsoft Entra Self-Service Password Reset</h3>
+      <p><strong>Problem Statement:</strong> Implement and test self-service password reset (SSPR) capabilities to reduce helpdesk workload and empower users.</p>
+      <p><strong>Approach:</strong> Configured SSPR in Microsoft Entra, defined authentication methods, and tested password reset flows using test user accounts.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra, Azure AD, Authentication Methods Policy</p>
+      <p><strong>Key Lessons Learned:</strong> Learned the importance of multifactor authentication in SSPR and how to enforce secure self-service practices across an organization.</p>
+    </article>
+
+    <article>
+      <h3>Lab: Microsoft Entra Conditional Access</h3>
+      <p><strong>Problem Statement:</strong> Create conditional access policies to protect resources and ensure only compliant and secure devices/users gain access.</p>
+      <p><strong>Approach:</strong> Defined conditional access policies based on location, device compliance, and risk levels. Simulated user login scenarios to evaluate policy impact.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra, Conditional Access Policy Builder, Azure AD Sign-in Logs</p>
+      <p><strong>Key Lessons Learned:</strong> Learned how conditional access policies can dynamically adapt to threat conditions and help enforce Zero Trust principles.</p>
+    </article>
+
+    <article>
+      <h3>Lab: Explore Privileged Identity Management (PIM)</h3>
+      <p><strong>Problem Statement:</strong> Investigate how to manage just-in-time (JIT) privileged access to protect high-risk roles in Microsoft Entra.</p>
+      <p><strong>Approach:</strong> Enabled and configured Microsoft Entra Privileged Identity Management, assigned eligible roles, and tested role activation workflows with approvals.</p>
+      <p><strong>Tools Used:</strong> Microsoft Entra PIM, Azure AD, Role Settings, Notifications</p>
+      <p><strong>Key Lessons Learned:</strong> Understood how PIM minimizes the risk of privilege abuse and ensures accountability through access reviews and audit logs.</p>
+    </article>
   </section>
 
   <section id="experience">
@@ -175,6 +221,3 @@
 
 </body>
 </html>
-
-
-
